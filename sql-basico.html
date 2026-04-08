@@ -42,9 +42,10 @@ h1 span{color:var(--fuego-vivo)}
 
 .temario{margin-bottom:2.5rem}
 .temario h2{font-family:var(--font-display);font-size:1.8rem;letter-spacing:.04em;color:var(--texto);margin-bottom:1rem}
-.temario-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+
+/*.temario-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
 .temario-list li{font-family:var(--font-mono);font-size:.85rem;color:var(--texto-dim);padding:.7rem 1rem;background:var(--oscuro2);border:1px solid var(--borde);border-radius:6px;display:flex;align-items:center;gap:.75rem}
-.temario-list li::before{content:'→';color:var(--fuego-vivo);font-weight:700;flex-shrink:0}
+.temario-list li::before{content:'→';color:var(--fuego-vivo);font-weight:700;flex-shrink:0}*/
 
 .precio-cta{background:var(--oscuro2);border:1px solid var(--borde-vivo);border-radius:10px;padding:2rem 2.2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
 .precio-info .monto{font-family:var(--font-display);font-size:3rem;letter-spacing:.04em;color:var(--fuego-vivo);line-height:1}
@@ -71,6 +72,71 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
   max-width:520px;
   margin-bottom:14px;
 }
+
+
+.temario-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
+  margin:0;
+  padding:0;
+}
+
+.temario-list li{
+  font-family:var(--font-mono);
+  font-size:.85rem;
+  color:var(--texto-dim);
+  padding:.95rem 1rem;
+  background:var(--oscuro2);
+  border:1px solid var(--borde);
+  border-radius:6px;
+  display:grid;
+  grid-template-columns:24px 180px 1fr;
+  gap:16px;
+  align-items:center;
+  line-height:1.5;
+  transition:all .2s ease;
+}
+
+.temario-list li:hover{
+  border-color:var(--fuego-vivo);
+  transform:translateY(-2px);
+}
+
+.temario-list .tm-icon{
+  color:var(--fuego-vivo);
+  font-weight:700;
+  line-height:1.4;
+}
+
+.temario-list .tm-title{
+  color:#ffffff;
+  font-weight:700;
+  line-height:1.4;
+}
+
+.temario-list .tm-desc{
+  color:var(--texto-dim);
+  line-height:1.5;
+}
+
+@media (max-width: 700px){
+  .temario-list li{
+    grid-template-columns:24px 1fr;
+  }
+
+  .temario-list .tm-title{
+    margin-bottom:.35rem;
+  }
+
+  .temario-list .tm-desc{
+    grid-column:2 / 3;
+  }
+}
+
+
+
 
 @media(max-width:600px){.precio-cta{flex-direction:column;align-items:flex-start}}
 </style>
@@ -101,18 +167,56 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
     <p>Al finalizar vas a poder leer, escribir y entender consultas SQL con confianza, filtrar y ordenar datos, y trabajar con tablas relacionadas usando JOINs. Todo con acceso de por vida y actualizaciones incluidas.</p>
   </div>
 
-  <div class="temario">
-    <h2>QUÉ VAS A APRENDER</h2>
-    <ul class="temario-list">
-      <li>SELECT, FROM, WHERE — las bases de cualquier consulta</li>
-      <li>ORDER BY, LIMIT y filtros con AND / OR / NOT</li>
-      <li>Funciones de agregación: COUNT, SUM, AVG, MIN, MAX</li>
-      <li>GROUP BY y HAVING</li>
-      <li>INNER JOIN, LEFT JOIN y cómo combinar tablas</li>
-      <li>INSERT, UPDATE y DELETE — manipulación de datos</li>
-      <li>Subconsultas básicas y uso práctico</li>
-    </ul>
-  </div>
+<div class="temario">
+  <h2>QUÉ VAS A APRENDER</h2>
+
+
+<ul class="temario-list">
+  <li>
+    <span class="tm-icon">→</span>
+    <span class="tm-title">Fundamentos</span>
+    <span class="tm-desc">Qué es una base de datos, cómo funciona y cuándo usar SQL o NoSQL</span>
+  </li>
+
+  <li>
+    <span class="tm-icon">→</span>
+    <span class="tm-title">Modelado de Datos</span>
+    <span class="tm-desc">Creación de tablas, tipos de datos, claves primarias y foráneas</span>
+  </li>
+
+  <li>
+    <span class="tm-icon">→</span>
+    <span class="tm-title">Manipulación de Datos</span>
+    <span class="tm-desc">INSERT, UPDATE y DELETE para trabajar con información real</span>
+  </li>
+
+  <li>
+    <span class="tm-icon">→</span>
+    <span class="tm-title">Consultas SQL</span>
+    <span class="tm-desc">SELECT, WHERE, ORDER BY, GROUP BY</span>
+  </li>
+
+  <li>
+    <span class="tm-icon">→</span>
+    <span class="tm-title">Funciones</span>
+    <span class="tm-desc">COUNT, SUM, AVG, MIN, MAX</span>
+  </li>
+
+<li>
+  <span class="tm-icon">→</span>
+  <span class="tm-title">Filtros y Condiciones</span>
+  <span class="tm-desc">LIKE, IN, BETWEEN, operadores lógicos</span>
+</li>
+
+  <li>
+    <span class="tm-icon">→</span>
+    <span class="tm-title">Relaciones</span>
+    <span class="tm-desc">Modelos 1-N e INNER JOIN aplicado a casos reales</span>
+  </li>
+</ul>
+
+
+</div>
 
 
 <div class="desc-block">

@@ -211,7 +211,7 @@ h2.sh{font-family:var(--fd);font-size:clamp(1.9rem,4.5vw,3.4rem);letter-spacing:
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:1.4rem;
-  align-items:start;
+  align-items:stretch;
 }
 
 
@@ -226,7 +226,9 @@ h2.sh{font-family:var(--fd);font-size:clamp(1.9rem,4.5vw,3.4rem);letter-spacing:
   transition:border-color .22s,transform .22s,box-shadow .22s;
   position:relative;
   backdrop-filter:blur(6px);
-  align-self:start;
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 
 
@@ -283,6 +285,11 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
 /* code highlight */
 .tk{color:var(--fuego-vivo)}.tt{color:var(--llama)}.ts{color:#FFD580}.tn{color:#FF9F7A}.tc{color:#2a4050}.tok{color:#69D46E}
 .tl{color:#1b3040;margin-right:10px;user-select:none;font-size:.66rem}
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -495,7 +502,7 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
           <div class="cc-tit">Aprendé SQL aunque nunca hayas programado</div>
           <p class="cc-desc">Vas a poder consultar, filtrar y analizar datos reales desde la primera clase. Sin jerga técnica, sin vueltas.</p>
           <div class="cc-temas">
-            <span class="ct">Sin experiencia previa</span><span class="ct">Casos reales</span><span class="ct">Ejercicios prácticos</span><span class="ct">Acceso de por vida</span>
+            <span class="ct">Sin experiencia previa</span><span class="ct">Casos reales</span><span class="ct">Ejercicios prácticos</span>
           </div>
 
 
@@ -518,28 +525,37 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
 
 </div>
 
-      <div class="curso-card reveal rd1" style="--stripe:linear-gradient(90deg,#FF6B1A,#FFB347)">
-        <div class="cc-code">
-          <span class="tl">1</span><span class="tc">-- Queries de nivel pro</span><br>
-          <span class="tl">2</span><span class="tk">WITH</span> rk <span class="tk">AS</span> (<br>
-          <span class="tl">3</span>&nbsp;&nbsp;<span class="tk">SELECT</span> vendedor,<br>
-          <span class="tl">4</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tk">RANK</span>() <span class="tk">OVER</span>(<span class="tk">ORDER BY</span> total <span class="tk">DESC</span>) pos<br>
-          <span class="tl">5</span>&nbsp;&nbsp;<span class="tk">FROM</span> <span class="tt">ventas</span>)<br>
-          <span class="tl">6</span><span class="tk">SELECT</span> * <span class="tk">FROM</span> rk;
+<div class="curso-card reveal rd1" style="--stripe:linear-gradient(90deg,#FF6B1A,#FFB347)">
+  <div class="cc-body">
+    <span class="cc-badge b-int">🔥 Intermedio</span>
+
+    <div class="cc-tit">Cuando lo básico ya no alcanza</div>
+
+    <p class="cc-desc">
+      Si ya entendés SQL pero sentís que te falta soltura, este es el siguiente paso. Vas a empezar a resolver situaciones reales con más criterio, más confianza y más velocidad.
+    </p>
+
+    <div class="cc-temas">
+      <span class="ct">Base previa</span>
+      <span class="ct">Casos reales</span>
+      <span class="ct">Más práctica</span>
+    </div>
+
+    <div class="cc-foot">
+      <div>
+        <div style="font-size:.75rem;color:#aaa;margin-bottom:6px">
+          Requiere base previa
         </div>
-        <div class="cc-body">
-          <span class="cc-badge b-int">🔥 Intermedio</span>
-          <div class="cc-tit">SQL Intermedio</div>
-          <p class="cc-desc">Para los que ya saben lo básico y quieren escribir queries realmente poderosas.</p>
-          <div class="cc-temas">
-            <span class="ct">CTEs</span><span class="ct">Window Functions</span><span class="ct">Subconsultas</span><span class="ct">Índices</span>
-          </div>
-          <div class="cc-foot">
-            <div class="cc-precio"><div class="pn">$12.999</div><div class="pm">ARS · pago único</div></div>
-            <a href="#cta" class="btn-comprar">Quiero este curso →</a>
-          </div>
+        <div class="cc-precio">
+          <div class="pn">$12.999</div>
+          <div class="pm">ARS · pago único</div>
         </div>
       </div>
+      <a href="sql-intermedio.html" class="btn-comprar">Quiero avanzar →</a>
+    </div>
+  </div>
+</div>
+
 
     </div>
   </div>
