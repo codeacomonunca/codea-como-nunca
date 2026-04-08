@@ -6,12 +6,12 @@
 <title>SQL Básico — Codeá como nunca</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root{--fuego:#E8450A;--fuego-vivo:#FF6B1A;--llama:#FFB347;--oscuro:#1C2B35;--oscuro2:#14222A;--oscuro3:#0E1A21;--texto:#F0E6D8;--texto-dim:#A89080;--borde:rgba(232,69,10,0.18);--borde-vivo:rgba(232,69,10,0.45);--font-display:'Bebas Neue',sans-serif;--fd:'Bebas Neue',sans-serif;--font-body:'Nunito',sans-serif;--font-mono:'JetBrains Mono',monospace}
+:root{--fuego:#E8450A;--fuego-vivo:#FF6B1A;--llama:#FFB347;--oscuro:#1C2B35;--oscuro2:#14222A;--oscuro3:#050b0f;--texto:#F0E6D8;--texto-dim:#A89080;--borde:rgba(232,69,10,0.18);--borde-vivo:rgba(232,69,10,0.45);--font-display:'Bebas Neue',sans-serif;--fd:'Bebas Neue',sans-serif;--font-body:'Nunito',sans-serif;--font-mono:'JetBrains Mono',monospace}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--oscuro3);color:var(--texto);font-family:var(--font-body);overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(232,69,10,0.06) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;z-index:0}
-body::after{content:'';position:fixed;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(232,69,10,0.12) 0%,transparent 70%);pointer-events:none;z-index:0}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(232,69,10,0.02) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(232,69,10,0.04) 0%,transparent 70%);pointer-events:none;z-index:0}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,5vw,3rem);background:rgba(13,25,32,0.8);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid var(--borde)}
 .nl{display:flex;align-items:center;gap:10px;text-decoration:none}
@@ -64,6 +64,14 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
 .flinks a:hover{color:var(--llama)}
 .fcopy{font-size:.72rem;color:var(--texto-dim)}
 
+.frase-conversion{
+  font-size:0.9rem;
+  line-height:1.5;
+  color:var(--texto);
+  max-width:520px;
+  margin-bottom:14px;
+}
+
 @media(max-width:600px){.precio-cta{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
@@ -91,7 +99,6 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
   <div class="desc-block">
     <p>Este curso es el punto de partida ideal si nunca escribiste una consulta SQL o querés consolidar las bases. Aprendés desde cero, con ejemplos reales y un ritmo pensado para que nada quede en el aire.</p>
     <p>Al finalizar vas a poder leer, escribir y entender consultas SQL con confianza, filtrar y ordenar datos, y trabajar con tablas relacionadas usando JOINs. Todo con acceso de por vida y actualizaciones incluidas.</p>
-    <p><em>(Contenido completo próximamente — este es un placeholder.)</em></p>
   </div>
 
   <div class="temario">
@@ -107,14 +114,60 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
     </ul>
   </div>
 
+
+<div class="desc-block">
+  <h2 style="font-family:var(--font-display);font-size:1.8rem;letter-spacing:.04em;color:var(--texto);margin-bottom:1rem">
+    ¿Este curso es para vos?
+  </h2>
+  <ul style="margin:0 0 1.8rem 1.2rem;line-height:1.8;color:var(--texto-dim)">
+    <li>Querés empezar en bases de datos desde cero</li>
+    <li>Trabajás con Excel y sentís que se queda corto</li>
+    <li>Querés entender de dónde salen los datos de los dashboards</li>
+    <li>Buscás una habilidad concreta para crecer profesionalmente</li>
+  </ul>
+
+  <h2 style="font-family:var(--font-display);font-size:1.8rem;letter-spacing:.04em;color:var(--texto);margin-bottom:1rem">
+    ¿Cómo es el curso?
+  </h2>
+  <ul style="margin:0 0 1.8rem 1.2rem;line-height:1.8;color:var(--texto-dim)">
+    <li>4 clases en vivo (2 horas cada una)</li>
+    <li>100% online (Google Meet)</li>
+    <li>Clases prácticas con casos reales</li>
+  </ul>
+
+  <h2 style="font-family:var(--font-display);font-size:1.8rem;letter-spacing:.04em;color:var(--texto);margin-bottom:1rem">
+    Detalles del curso
+  </h2>
+  <p style="margin-bottom:1.8rem;color:var(--texto-dim);line-height:1.8">
+    Inicio: Martes 10 de marzo de 2026<br>
+    Días: Martes y Jueves<br>
+    Horario: 20:00 a 22:00 hs (Argentina)<br>
+    Modalidad: Online en vivo
+  </p>
+
+  <h2 style="font-family:var(--font-display);font-size:1.8rem;letter-spacing:.04em;color:var(--texto);margin-bottom:1rem">
+    ¿Qué te llevás?
+  </h2>
+  <ul style="margin:0 0 0 1.2rem;line-height:1.8;color:var(--texto-dim)">
+    <li>Grabaciones de las clases (1 mes)</li>
+    <li>Material de estudio</li>
+    <li>Ejercicios con casos reales</li>
+    <li>Certificado de asistencia</li>
+    <li>Podés repetir el curso sin costo si te quedan dudas</li>
+  </ul>
+</div>
+
   <div class="precio-cta">
+    <p class="frase-conversion">
+       <strong>Arrancás sin experiencia</strong> y en 4 clases ya consultás datos reales.
+    </p>
     <div class="precio-info">
       <div class="monto">$9.999</div>
       <small>ARS · pago único</small>
-      <div class="acceso">⚡ Acceso de por vida · Actualizaciones incluidas</div>
+      <div class="acceso">⚡ Cupos limitados · Se llena rápido - No te quedes afuera</div>
     </div>
     <a href="https://wa.me/549XXXXXXXXXX?text=Hola!%20Me%20interesa%20el%20curso%20de%20SQL%20B%C3%A1sico" target="_blank" class="btn-whatsapp">
-      💬 Inscribirme por WhatsApp
+      💬 Reservar mi lugar
     </a>
   </div>
 </main>

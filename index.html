@@ -11,11 +11,11 @@
   --fuego:#E8450A;
   --fuego-vivo:#FF6B1A;
   --llama:#FFB347;
-  --oscuro3:#0D1920;
+  --oscuro3:#050b0f;
   --oscuro2:#14222A;
   --oscuro:#1C2B35;
   --texto:#F0E6D8;
-  --texto-dim:#8A7B6E;
+  --texto-dim:#cfcfcf;
   --borde:rgba(232,69,10,0.14);
   --borde-vivo:rgba(232,69,10,0.38);
   --fd:'Bebas Neue',sans-serif;
@@ -29,9 +29,12 @@ body{background:var(--oscuro3);color:var(--texto);font-family:var(--fb);overflow
 
 /* fondo */
 .grid-bg{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(232,69,10,0.028) 1px,transparent 1px),linear-gradient(90deg,rgba(232,69,10,0.028) 1px,transparent 1px);background-size:64px 64px}
-.glow-a{position:fixed;top:-20vh;left:-10vw;width:75vw;height:65vh;background:radial-gradient(ellipse,rgba(232,69,10,0.1) 0%,transparent 65%);pointer-events:none;z-index:0}
-.glow-b{position:fixed;bottom:-15vh;right:-8vw;width:55vw;height:55vh;background:radial-gradient(ellipse,rgba(255,179,71,0.055) 0%,transparent 65%);pointer-events:none;z-index:0}
-body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E")}
+/*.glow-a{position:fixed;top:-20vh;left:-10vw;width:75vw;height:65vh;background:radial-gradient(ellipse,rgba(232,69,10,0.1) 0%,transparent 65%);pointer-events:none;z-index:0}
+.glow-b{position:fixed;bottom:-15vh;right:-8vw;width:55vw;height:55vh;background:radial-gradient(ellipse,rgba(255,179,71,0.055) 0%,transparent 65%);pointer-events:none;z-index:0}*/
+.glow-a{position:fixed;top:-20vh;left:-10vw;width:75vw;height:65vh;background:radial-gradient(ellipse,rgba(232,69,10,0.045) 0%,transparent 65%);pointer-events:none;z-index:0}
+.glow-b{position:fixed;bottom:-15vh;right:-8vw;width:55vw;height:55vh;background:radial-gradient(ellipse,rgba(255,179,71,0.02) 0%,transparent 65%);pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.28;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E")}
+/*body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E")}*/
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,5vw,3rem);background:rgba(13,25,32,0.8);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid var(--borde)}
@@ -200,8 +203,33 @@ h2.sh{font-family:var(--fd);font-size:clamp(1.9rem,4.5vw,3.4rem);letter-spacing:
 .cursos-intro-txt{flex:1;min-width:260px}
 .cursos-intro-badge{flex-shrink:0;padding:1.1rem 1.4rem;border:1px dashed rgba(255,179,71,0.2);border-radius:10px;background:rgba(255,179,71,0.04);font-size:.82rem;color:var(--texto-dim);line-height:1.7;max-width:260px}
 .cursos-intro-badge strong{color:var(--llama);display:block;font-size:.75rem;font-family:var(--fm);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.3rem}
-.cursos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem}
-.curso-card{background:rgba(20,34,42,0.7);border:1px solid var(--borde);border-radius:13px;overflow:hidden;transition:border-color .22s,transform .22s,box-shadow .22s;position:relative;backdrop-filter:blur(6px)}
+
+
+/*.cursos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem}*/
+
+.cursos-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.4rem;
+  align-items:start;
+}
+
+
+
+/*.curso-card{background:rgba(20,34,42,0.7);border:1px solid var(--borde);border-radius:13px;overflow:hidden;transition:border-color .22s,transform .22s,box-shadow .22s;position:relative;backdrop-filter:blur(6px)}*/
+
+.curso-card{
+  background:rgba(20,34,42,0.7);
+  border:1px solid var(--borde);
+  border-radius:13px;
+  overflow:hidden;
+  transition:border-color .22s,transform .22s,box-shadow .22s;
+  position:relative;
+  backdrop-filter:blur(6px);
+  align-self:start;
+}
+
+
 .curso-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--stripe)}
 .curso-card:hover{border-color:var(--borde-vivo);transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,0.38),0 0 24px rgba(232,69,10,0.08)}
 .cc-code{padding:18px 18px 0;font-family:var(--fm);font-size:.73rem;line-height:1.85;color:var(--texto-dim);min-height:130px}
@@ -462,21 +490,6 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
     <div class="cursos-grid">
 
 <div class="curso-card reveal" style="--stripe:linear-gradient(90deg,#E8450A,#FF8C42)">
-        <div class="cc-code" style="display:flex;flex-direction:column;justify-content:center;gap:10px;padding:1.4rem 1.6rem;font-family:'Nunito',sans-serif">
-          <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:#FF8C42;font-weight:800;margin-bottom:2px">¿Te pasó alguna de estas?</div>
-          <div style="display:flex;align-items:center;gap:10px;color:#F0E6D8;font-size:.88rem">
-            <span style="font-size:1.1rem">😩</span> Tu jefe pide un reporte y no sabés por dónde empezar
-          </div>
-          <div style="display:flex;align-items:center;gap:10px;color:#F0E6D8;font-size:.88rem">
-            <span style="font-size:1.1rem">📊</span> Tenés miles de filas en Excel y se tarda una eternidad
-          </div>
-          <div style="display:flex;align-items:center;gap:10px;color:#F0E6D8;font-size:.88rem">
-            <span style="font-size:1.1rem">🤯</span> Ves un dashboard y no entendés de dónde salen los números
-          </div>
-          <div style="margin-top:6px;padding:8px 14px;background:rgba(232,69,10,0.18);border:1px solid rgba(232,69,10,0.45);border-radius:8px;color:#FFB347;font-size:.86rem;font-weight:700;text-align:center">
-            ✅ SQL te da el control — y se aprende más rápido de lo que pensás
-          </div>
-        </div>
         <div class="cc-body">
           <span class="cc-badge b-bas">🟠 Básico</span>
           <div class="cc-tit">Aprendé SQL aunque nunca hayas programado</div>
@@ -484,12 +497,26 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
           <div class="cc-temas">
             <span class="ct">Sin experiencia previa</span><span class="ct">Casos reales</span><span class="ct">Ejercicios prácticos</span><span class="ct">Acceso de por vida</span>
           </div>
-          <div class="cc-foot">
-            <div class="cc-precio"><div class="pn">$9.999</div><div class="pm">ARS · pago único</div></div>
-            <a href="sql-basico.html" class="btn-comprar">Empezar ahora →</a>
-          </div>
+
+
+ <div class="cc-foot">
+  <div>
+    <div style="font-size:.75rem;color:#aaa;margin-bottom:6px">
+      No necesitás experiencia previa
+    </div>
+    <div class="cc-precio">
+      <div class="pn">$9.999</div>
+      <div class="pm">ARS · pago único</div>
+    </div>
+  </div>
+  <a href="sql-basico.html" class="btn-comprar">Quiero aprender SQL →</a>
+</div>
+
+
+
         </div>
-      </div>
+
+</div>
 
       <div class="curso-card reveal rd1" style="--stripe:linear-gradient(90deg,#FF6B1A,#FFB347)">
         <div class="cc-code">
