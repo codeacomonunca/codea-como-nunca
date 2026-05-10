@@ -13,6 +13,66 @@ body{background:var(--oscuro3);color:var(--texto);font-family:var(--font-body);o
 body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(rgba(232,69,10,0.02) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;z-index:0}
 body::after{content:'';position:fixed;top:-200px;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(232,69,10,0.04) 0%,transparent 70%);pointer-events:none;z-index:0}
 
+
+.flag{
+  width:18px;
+  height:13px;
+  object-fit:cover;
+  border-radius:2px;
+  vertical-align:-2px;
+  margin-right:6px;
+}
+
+
+.horarios-paises{
+  display:block;
+  margin-top:.35rem;
+  line-height:1.9;
+}
+
+
+.precio-info{
+  margin: 14px 0 22px;
+}
+
+.monto{
+  font-family:var(--font-display);
+  font-size:clamp(2.2rem, 7vw, 3rem);
+  letter-spacing:.04em;
+  color:var(--fuego-vivo);
+  line-height:1;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:nowrap;
+  white-space:nowrap;
+}
+
+.detalle-pago{
+  font-size:0.9rem;
+  color:var(--texto-dim);
+  margin-bottom:8px;
+}
+
+.medios-pago{
+  font-size:0.95rem;
+  color:var(--texto);
+  margin-bottom:18px;
+}
+
+.acceso{
+  font-size:0.9rem;
+  color:var(--texto-dim);
+}
+
+@media(max-width:600px){
+  .monto{
+    font-size:2.15rem;
+    gap:8px;
+  }
+}
+
 nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,5vw,3rem);background:rgba(13,25,32,0.8);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid var(--borde)}
 .nl{display:flex;align-items:center;gap:10px;text-decoration:none}
 .nl img{width:34px;height:34px;object-fit:contain;border-radius:7px;box-shadow:0 0 10px rgba(232,69,10,0.28)}
@@ -105,9 +165,9 @@ h1 span{color:var(--fuego-vivo)}
 }
 
 .precio-cta{background:var(--oscuro2);border:1px solid var(--borde-vivo);border-radius:10px;padding:2rem 2.2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.precio-info .monto{font-family:var(--font-display);font-size:3rem;letter-spacing:.04em;color:var(--fuego-vivo);line-height:1}
-.precio-info small{font-family:var(--font-mono);font-size:.75rem;color:var(--texto-dim)}
-.precio-info .acceso{font-size:.85rem;color:var(--texto-dim);margin-top:.4rem}
+
+
+
 
 .btn-whatsapp{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:14px 30px;border-radius:6px;font-family:var(--font-body);font-weight:800;font-size:1rem;text-decoration:none;transition:background .2s,transform .15s;white-space:nowrap}
 .btn-whatsapp:hover{background:#1ebe5a;transform:translateY(-2px)}
@@ -244,11 +304,27 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
     Detalles del curso
   </h2>
   <p style="margin-bottom:1.8rem;color:var(--texto-dim);line-height:1.8">
-    Inicio: Martes 5 de mayo de 2026<br>
-    Días: Martes y Jueves<br>
-    Horario: 20:00 a 22:00 hs (Argentina)<br>
-    Modalidad: Online en vivo
-  </p>
+  <strong style="color:var(--texto)">Inicio:</strong> Martes 2 de junio de 2026<br>
+  <strong style="color:var(--texto)">Finaliza:</strong> Jueves 11 de junio de 2026<br>
+  <strong style="color:var(--texto)">Días:</strong> Martes y Jueves (4 clases)<br>
+<strong style="color:var(--texto)">
+  <img class="flag" src="https://flagcdn.com/w40/ar.png" alt="Argentina"> 
+  Horario:
+</strong> 19:30 a 21:30 (GMT-3 · Argentina)<br><br>
+
+<strong style="color:var(--texto)">También disponible en otros países:</strong><br>
+
+<span class="horarios-paises">
+  <img class="flag" src="https://flagcdn.com/w40/mx.png" alt="México">16:30–18:30 ·
+  <img class="flag" src="https://flagcdn.com/w40/pe.png" alt="Perú">17:30–19:30 ·
+  <img class="flag" src="https://flagcdn.com/w40/co.png" alt="Colombia">17:30–19:30<br>
+  <img class="flag" src="https://flagcdn.com/w40/bo.png" alt="Bolivia">18:30–20:30 ·
+  <img class="flag" src="https://flagcdn.com/w40/ve.png" alt="Venezuela">18:30–20:30 ·
+  <img class="flag" src="https://flagcdn.com/w40/us.png" alt="Estados Unidos">18:30–20:30 (Nueva York)
+</span><br>
+
+  <strong style="color:var(--texto)">Modalidad:</strong> En vivo por Google Meet
+</p>
 
   <h2 style="font-family:var(--font-display);font-size:1.8rem;letter-spacing:.04em;color:var(--texto);margin-bottom:1rem">
     ¿Qué te llevás?
@@ -262,19 +338,32 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
   </ul>
 </div>
 
-  <div class="precio-cta">
-    <p class="frase-conversion">
-      <strong>Pasás de saber lo básico</strong> a escribir consultas que otros no saben ni leer.
-    </p>
-    <div class="precio-info">
-      <div class="monto">$12.999</div>
-      <small>ARS · pago único</small>
-      <div class="acceso">⚡ Requiere base previa · Cupos limitados</div>
+  
+<div class="precio-cta">
+  <p class="frase-conversion">
+    <strong>Pasás de saber lo básico</strong> a escribir consultas que otros no saben ni leer.
+  </p>
+
+  <div class="precio-info">
+    <div class="monto"><span>$89.000 ARS</span><span>· USD 59</span></div>
+
+    <div class="detalle-pago">
+      Pago único · acceso de por vida
     </div>
-    <a href="https://wa.me/549XXXXXXXXXX?text=Hola!%20Me%20interesa%20el%20curso%20de%20SQL%20Intermedio" target="_blank" class="btn-whatsapp">
-      💬 Reservar mi lugar
-    </a>
+
+    <div class="medios-pago">
+      Mercado Pago · PayPal · Payoneer · Wise
+    </div>
+
+    <div class="acceso">
+      ⚡ Requiere base previa · Cupos limitados
+    </div>
   </div>
+
+  <a href="https://wa.me/541164264256?text=Hola!%20Quiero%20reservar%20mi%20lugar%20en%20el%20curso%20de%20SQL%20Intermedio" target="_blank" class="btn-whatsapp">
+    💬 Reservar mi lugar ahora
+  </a>
+</div>
 </main>
 
 <footer>
