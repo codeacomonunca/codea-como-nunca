@@ -297,6 +297,34 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
 
 
 
+
+/* Mejoras de conversión: sección cursos */
+#cursos .sh{line-height:1.05;max-width:900px}
+.curso-confianza{display:flex;gap:.7rem;flex-wrap:wrap;margin:0 0 2rem}
+.curso-confianza span{font-size:.79rem;font-weight:800;color:var(--texto);background:rgba(255,179,71,.055);border:1px solid rgba(255,179,71,.18);border-radius:8px;padding:.55rem .8rem}
+#cursos .curso-card .cc-body{display:flex;flex-direction:column;flex:1;padding:1.7rem}
+#cursos .cc-tit{font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.3;margin-bottom:.8rem}
+#cursos .cc-desc{font-size:.9rem;line-height:1.8}
+#cursos .cc-temas{margin-bottom:1.7rem}
+#cursos .cc-foot{margin-top:auto;align-items:center;gap:1rem}
+.curso-dato{display:flex;flex-direction:column;gap:4px}
+.curso-dato strong{font-size:.87rem;color:var(--texto)}
+.curso-dato span{font-size:.75rem;color:var(--texto-dim)}
+#cursos .btn-comprar{padding:12px 17px;white-space:normal;text-align:center;justify-content:center}
+.curso-aclaracion{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;background:rgba(255,179,71,.045);border:1px solid rgba(255,179,71,.2);border-radius:12px;padding:1.3rem 1.5rem;margin-top:1.5rem}
+.curso-aclaracion-icon{font-size:1.5rem}
+.curso-aclaracion>div{flex:1;min-width:220px}
+.curso-aclaracion strong{color:var(--llama);font-size:.9rem}
+.curso-aclaracion p{color:var(--texto-dim);font-size:.82rem;line-height:1.7;margin-top:.25rem}
+.curso-aclaracion-link{color:var(--llama);font-size:.8rem;font-weight:900;text-decoration:none}
+.curso-aclaracion-link:hover{text-decoration:underline}
+.curso-docente{display:flex;align-items:center;gap:1.3rem;margin-top:2rem;padding:1.4rem 1.6rem;border:1px solid var(--borde);border-radius:12px;background:rgba(20,34,42,.55)}
+.curso-docente img{width:94px;height:94px;object-fit:cover;border-radius:50%;border:2px solid var(--borde-vivo);flex-shrink:0}
+.curso-docente-kicker{font-family:var(--fm);font-size:.65rem;color:var(--llama);letter-spacing:.08em}
+.curso-docente h3{font-size:1.1rem;margin:.3rem 0}
+.curso-docente p{font-size:.83rem;color:var(--texto-dim);line-height:1.7}
+@media(max-width:600px){#cursos .cc-foot{align-items:stretch;flex-direction:column}#cursos .btn-comprar{width:100%}.curso-docente{align-items:flex-start;flex-direction:column}.curso-docente img{width:76px;height:76px}}
+
 </style>
 </head>
 <body>
@@ -503,83 +531,34 @@ footer::before{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;ba
 <!-- ── CURSOS ── -->
 <section class="bloque" id="cursos">
   <div class="bi">
-
-    <div class="cursos-intro">
-      <div class="cursos-intro-txt">
-        <div class="eyebrow">aprendé sin límites</div>
-        <h2 class="sh">CURSOS</h2>
-        <p class="ssub" style="margin-bottom:0">SQL explicado como se usa en la industria real. Sin relleno, sin teoría vacía — directo al código que importa.</p>
-      </div>
-      <div class="cursos-intro-badge">
-        <strong>💡 ¿Empezás desde cero?</strong>
-        Arrancá por el contenido gratuito en TikTok. Cuando quieras más estructura y profundidad, los cursos te esperan.
-      </div>
+    <div class="eyebrow">de TikTok a la práctica</div>
+    <h2 class="sh">¿TE GUSTA CÓMO EXPLICO SQL?<br><span style="color:var(--fuego-vivo)">APRENDÉ CONMIGO EN VIVO.</span></h2>
+    <p class="ssub" style="max-width:760px;margin-bottom:1.7rem">Pasá de mirar ejercicios a resolverlos vos. En mis clases podés preguntar, practicar y entender el porqué de cada consulta, paso a paso y sin vueltas.</p>
+    <div class="curso-confianza" aria-label="Características de las clases">
+      <span>✓ Clases en vivo por Google Meet</span><span>✓ 4 clases de 2 horas</span><span>✓ Ejercicios prácticos</span><span>✓ Podés hacer preguntas</span>
     </div>
-
     <div class="cursos-grid">
-
-<div class="curso-card reveal" style="--stripe:linear-gradient(90deg,#E8450A,#FF8C42)">
+      <article class="curso-card reveal" style="--stripe:linear-gradient(90deg,#E8450A,#FF8C42)">
         <div class="cc-body">
-          <span class="cc-badge b-bas">🟠 Básico</span>
-          <div class="cc-tit">Aprendé SQL aunque nunca hayas programado</div>
-          <p class="cc-desc">Empezá desde cero y construí una base sólida en SQL con clases claras y prácticas, sin complicaciones.</p>
-          <div class="cc-temas">
-            <span class="ct">Sin experiencia previa</span><span class="ct">Casos reales</span><span class="ct">Ejercicios prácticos</span>
-          </div>
-
-
- <div class="cc-foot">
-  <div>
-    <div style="font-size:.75rem;color:#aaa;margin-bottom:6px">
-      No necesitás experiencia previa
-    </div>
-    <div class="cc-precio">
-      <div class="pn">$59.000 - USD 39</div>
-      <div class="pm">pago único</div>
-    </div>
-  </div>
-  <a href="sql-basico.html" class="btn-comprar">Quiero aprender SQL →</a>
-</div>
-
-
-
+          <span class="cc-badge b-bas">🟠 SQL Básico · desde cero</span>
+          <h3 class="cc-tit">De cero a tus primeras consultas SQL en 4 clases</h3>
+          <p class="cc-desc">Aprendé a trabajar con bases de datos y consultar información con ejemplos claros, práctica guiada y espacio para resolver dudas.</p>
+          <div class="cc-temas"><span class="ct">Sin experiencia previa</span><span class="ct">100% en vivo</span><span class="ct">Ejercicios prácticos</span></div>
+          <div class="cc-foot"><div class="curso-dato"><strong>8 horas de clases en vivo</strong><span>No necesitás saber programar</span></div><a href="sql-basico.html" class="btn-comprar">Ver programa y precio →</a></div>
         </div>
-
-</div>
-
-<div class="curso-card reveal rd1" style="--stripe:linear-gradient(90deg,#FF6B1A,#FFB347)">
-  <div class="cc-body">
-    <span class="cc-badge b-int">🔥 Intermedio</span>
-
-    <div class="cc-tit">Cuando lo básico se queda corto</div>
-
-    <p class="cc-desc">
-        Si ya sabés SQL básico pero te falta soltura, este es el siguiente paso para usarlo en casos reales.
-    </p>
-
-    <div class="cc-temas">
-      <span class="ct">Base previa</span>
-      <span class="ct">Consultas más complejas</span>
-      <span class="ct">Pensar como analista</span>
-    </div>
-
-    <div class="cc-foot">
-      <div>
-        <div style="font-size:.75rem;color:#aaa;margin-bottom:6px">
-          Requiere base previa
+      </article>
+      <article class="curso-card reveal rd1" style="--stripe:linear-gradient(90deg,#FF6B1A,#FFB347)">
+        <div class="cc-body">
+          <span class="cc-badge b-int">🔥 SQL Intermedio · siguiente nivel</span>
+          <h3 class="cc-tit">Dejá las consultas simples. Resolvé desafíos más complejos.</h3>
+          <p class="cc-desc">Si ya manejás lo básico, ganá soltura con consultas más avanzadas y ejercicios inspirados en situaciones reales.</p>
+          <div class="cc-temas"><span class="ct">Requiere base previa</span><span class="ct">100% en vivo</span><span class="ct">Casos reales</span></div>
+          <div class="cc-foot"><div class="curso-dato"><strong>8 horas de clases en vivo</strong><span>Para quienes ya conocen SQL básico</span></div><a href="sql-intermedio.html" class="btn-comprar">Ver programa y precio →</a></div>
         </div>
-        <div class="cc-precio">
-          <div class="pn">$89.000 - USD 59</div>
-          <div class="pm">pago único</div>
-        </div>
-      </div>
-      <a href="sql-intermedio.html" class="btn-comprar">Quiero avanzar →</a>
+      </article>
     </div>
-  </div>
-</div>
-
-
-    </div>
+    <div class="curso-aclaracion"><span class="curso-aclaracion-icon">💡</span><div><strong>¿No sabés por dónde empezar?</strong><p>Si nunca programaste, elegí SQL Básico. En cada página vas a encontrar el programa, las próximas fechas y el precio antes de decidir.</p></div><a href="sql-basico.html" class="curso-aclaracion-link">Conocer SQL Básico →</a></div>
+    <div class="curso-docente"><img src="assets/images/matias-codea.png" alt="Matías Fortunato, docente de Codeá como nunca" loading="lazy"><div><span class="curso-docente-kicker">LA MISMA PERSONA QUE VES EN TIKTOK</span><h3>Hola, soy Matías 👋</h3><p>En Codeá como nunca enseño programación de forma simple y sin vueltas. En las clases en vivo trabajamos juntos y podés preguntarme cuando algo no se entiende.</p></div></div>
   </div>
 </section>
 
